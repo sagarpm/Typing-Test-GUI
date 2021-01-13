@@ -3,15 +3,16 @@ from tkinter import *
 def login_click():
 	global username_entry, password_entry, error_message
 	#all that was needed to get it work was declaring global for entry widgets(works without bind also).
-	username='a'
-	password='a'
+	#username='a'
+	#password='a'
 	username_text=username_entry.get()
 	password_text=password_entry.get()
-	print("u "+username_text)
-	print("p "+password_text)
+	#print("u "+username_text)
+	#print("p "+password_text)
 	if(username_text!=username or password_text!=password):
 		error_message.configure(text='Username or Password is wrong!!!')
 		error_message.place(x=100,y=105)
+	#else we destroy the window and grant access to the user in the main window. This will in toplevel widget.
 	#else:
 	#	error_message.configure(text='Valid User')
 	#	error_message.place(x=150,y=105)
